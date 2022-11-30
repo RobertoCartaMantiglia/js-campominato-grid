@@ -9,7 +9,7 @@
 
 // recupero il contenitore della griglia dal documento: 
 const containerGrid = document.querySelector("div.grid");
-        containerGrid.classList.add("mb-5");
+containerGrid.classList.add("mb-5");
 
 // creo il quadrato/casella
 // const gridSquare = document.createElement("div");
@@ -28,14 +28,14 @@ const playButton = document.getElementById("button");
 
 //inserisco l'evento al click
 
-function getGridSquare (){
+function getGridSquare (number){
     const gridSquare = document.createElement("div");
     
     gridSquare.classList.add("square");    
 
     gridSquare.addEventListener("click", function(){
         gridSquare.classList.toggle("clicked");
-        console.log();
+        console.log(number);
     })
     return gridSquare;
 }
@@ -43,9 +43,9 @@ function getGridSquare (){
 playButton.addEventListener("click", function(){    
 
     for(let i=1; i<=100; i++){
-        const gridSquare = getGridSquare(i);
+        const gridSquare = getGridSquare();
         containerGrid.append(gridSquare);
-        gridSquare.append(i);
+        gridSquare.append(i);        
         
     }
 })
