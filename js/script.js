@@ -39,6 +39,11 @@ playButton.addEventListener("click", function(){
         containerGrid.append(gridSquare);
     
         gridSquare.append(i);
+
+        gridSquare.addEventListener("click", function(){
+            gridSquare.classList.add("clicked");
+            console.log(i);
+        })
     }
 })
 
