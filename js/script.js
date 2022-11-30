@@ -29,6 +29,6 @@ for(let i=0; i<100; i++){
     gridSquare.classList.add("square");
 
     containerGrid.append(gridSquare);
-
 }
 
+containerGrid.classList.add("mb-5")
