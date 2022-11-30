@@ -9,7 +9,7 @@
 
 // recupero il contenitore della griglia dal documento: 
 const containerGrid = document.querySelector("div.grid");
-containerGrid.classList.add("mb-5");
+        containerGrid.classList.add("mb-5");
 
 // creo il quadrato/casella
 // const gridSquare = document.createElement("div");
@@ -23,15 +23,25 @@ containerGrid.classList.add("mb-5");
 // inserisco l'elemento square all'interno di un ciclo for per aggiungere il numero dei quadrati che mi serviranno (100)
 
 
-for(let i=1; i<=100; i++){
+// richiamo il bottone dal documento allo script 
+const playButton = document.getElementById("button");
 
-    const gridSquare = document.createElement("div");
 
-    gridSquare.classList.add("square");
+playButton.addEventListener("click", function(){
+    
 
-    containerGrid.append(gridSquare);
+    for(let i=1; i<=100; i++){
 
-    gridSquare.append(i);
-}
+        const gridSquare = document.createElement("div");
+    
+        gridSquare.classList.add("square");
+    
+        containerGrid.append(gridSquare);
+    
+        gridSquare.append(i);
+    }
+})
+
+
 
 

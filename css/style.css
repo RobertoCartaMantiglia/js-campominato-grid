@@ -4,7 +4,7 @@ header{
 div.grid{
     width: 700px;
     height: 700px;
-    border: 1px solid blue;
+    border: 2px solid blue;
 }
 div.square{
     height: calc(100% / 10);
