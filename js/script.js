@@ -11,10 +11,24 @@
 const containerGrid = document.querySelector("div.grid");
 
 // creo il quadrato/casella
-const gridSquare = document.createElement("div");
+// const gridSquare = document.createElement("div");
 
 // aggiungo la classe "square" che ho preparato in css per vederne il comportamento 
-gridSquare.classList.add("square");
+// gridSquare.classList.add("square");
 
 // procedo ad "appenderlo" al parent 
-containerGrid.append(gridSquare);
+// containerGrid.append(gridSquare);
+
+// inserisco l'elemento square all'interno di un ciclo for per aggiungere il numero dei quadrati che mi serviranno (100)
+
+
+for(let i=0; i<100; i++){
+
+    const gridSquare = document.createElement("div");
+
+    gridSquare.classList.add("square");
+
+    containerGrid.append(gridSquare);
+
+}
+

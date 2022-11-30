@@ -1,9 +1,13 @@
 header{
     background-color: coral;
 }
-
+div.grid{
+    width: 800px;
+    height: 800px;
+    border: 1px solid blue;
+}
 div.square{
-    height: 100px;
-    width: 100px;
+    height: calc(100% / 10);
+    width: calc(100% / 10);
     border: 1px solid red;
 }
