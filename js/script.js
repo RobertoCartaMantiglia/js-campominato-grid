@@ -9,6 +9,7 @@
 
 // recupero il contenitore della griglia dal documento: 
 const containerGrid = document.querySelector("div.grid");
+containerGrid.classList.add("mb-5");
 
 // creo il quadrato/casella
 // const gridSquare = document.createElement("div");
@@ -22,13 +23,15 @@ const containerGrid = document.querySelector("div.grid");
 // inserisco l'elemento square all'interno di un ciclo for per aggiungere il numero dei quadrati che mi serviranno (100)
 
 
-for(let i=0; i<100; i++){
+for(let i=1; i<=100; i++){
 
     const gridSquare = document.createElement("div");
 
     gridSquare.classList.add("square");
 
     containerGrid.append(gridSquare);
+
+    gridSquare.append(i);
 }
 
-containerGrid.classList.add("mb-5")
+
