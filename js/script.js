@@ -41,12 +41,10 @@ function getGridSquare (number){
 }
 
 playButton.addEventListener("click", function(){    
-
     for(let i=1; i<=100; i++){
         const gridSquare = getGridSquare();
         containerGrid.append(gridSquare);
-        gridSquare.append(i);        
-        
+        gridSquare.append(i);     
     }
 })
 
