@@ -28,22 +28,25 @@ const playButton = document.getElementById("button");
 
 //inserisco l'evento al click
 
+function getGridSquare (){
+    const gridSquare = document.createElement("div");
+    
+    gridSquare.classList.add("square");    
+
+    gridSquare.addEventListener("click", function(){
+        gridSquare.classList.toggle("clicked");
+        console.log();
+    })
+    return gridSquare;
+}
+
 playButton.addEventListener("click", function(){    
 
     for(let i=1; i<=100; i++){
-
-        const gridSquare = document.createElement("div");
-    
-        gridSquare.classList.add("square");
-    
+        const gridSquare = getGridSquare(i);
         containerGrid.append(gridSquare);
-    
         gridSquare.append(i);
-
-        gridSquare.addEventListener("click", function(){
-            gridSquare.classList.add("clicked");
-            console.log(i);
-        })
+        
     }
 })
 
