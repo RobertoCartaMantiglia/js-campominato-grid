@@ -26,9 +26,9 @@ const containerGrid = document.querySelector("div.grid");
 // richiamo il bottone dal documento allo script 
 const playButton = document.getElementById("button");
 
+//inserisco l'evento al click
 
-playButton.addEventListener("click", function(){
-    
+playButton.addEventListener("click", function(){    
 
     for(let i=1; i<=100; i++){
 
