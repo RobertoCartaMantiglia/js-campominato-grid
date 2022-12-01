@@ -8,8 +8,7 @@
 
 
 // recupero il contenitore della griglia dal documento: 
-const containerGrid = document.querySelector("div.grid");
-containerGrid.classList.add("mb-5");
+// const containerGrid = document.querySelector("div.grid");
 
 // creo il quadrato/casella
 // const gridSquare = document.createElement("div");
@@ -40,13 +39,16 @@ function getGridSquare (number){
     return gridSquare;
 }
 
-playButton.addEventListener("click", function(){    
+playButton.addEventListener("click", function(){ 
+    const containerGrid = document.querySelector("div.grid");
+    containerGrid.classList.add("mb-5");   
+
     for(let i=1; i<=100; i++){
         const gridSquare = getGridSquare();
         containerGrid.append(gridSquare);
         gridSquare.append(i);     
     }
-})
+}, {once:true})   //{once:true} serve per far eseguire l'evento solo una volta... è vero solo una volta, quindi non si genereranno altre griglie
 
 
 
